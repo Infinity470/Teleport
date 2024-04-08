@@ -1,0 +1,16 @@
+name: Teleport
+version: '${project.version}'
+main: com.arctic.Teleport
+commands:
+  tp:
+    description: Teleport to a player
+    permission: teleport.tp
+  tphere:
+    description: Teleport a player at your positions
+    permission: teleport.tphere
+  vanish:
+    description: Hide you from other players
+    permission: teleport.vanish
+  unvanish:
+    description: Show you to other players
+    permission: teleport.unvanish
