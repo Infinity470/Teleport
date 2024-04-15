@@ -38,7 +38,7 @@
               <goal>shade</goal>
             </goals>
               <configuration>
-                  <outputFile>C:/Users/PC/Desktop/Plugins/Teleport.jar</outputFile>
+                  <outputFile>/Teleport.jar</outputFile>
               </configuration>
           </execution>
         </executions>
