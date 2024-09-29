@@ -5,12 +5,18 @@ commands:
   tp:
     description: Teleport to a player
     permission: teleport.tp
+  tpto:
+    description: Teleport a player or all players to another player
+    permission: teleport.tpto
   tphere:
-    description: Teleport a player at your positions
+    description: Teleport a player or all players at your position
     permission: teleport.tphere
   vanish:
-    description: Hide you from other players
+    description: Hide you or the player from other players
     permission: teleport.vanish
   unvanish:
-    description: Show you to other players
+    description: Show you or the player to other players
     permission: teleport.unvanish
+  tphelp:
+    description: List of all teleport commands
+    permission: teleport.help

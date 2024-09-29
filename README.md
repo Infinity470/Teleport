@@ -2,7 +2,7 @@
 
 # Teleport
 
-A simple plugin for teleport, this plugin has 4 commands. You can install this plugin so easily. You need to put this plugin in your plugin folder and restart the server and done.
+A simple plugin for teleport, this plugin has 6 commands.
 
 **Note:** If you are using EssentialsX plugin then this (Teleport) plugin does not need to use.
 
@@ -10,16 +10,24 @@ A simple plugin for teleport, this plugin has 4 commands. You can install this p
 - /tp
     - Description: Teleport to a player
     - Permission: `teleport.tp`
-    - Usage: /tp <player>
+    - Usage: /tp \<player>
+- /tpto
+  - Description: Teleport a player or all players to another player
+  - Permission: `teleport.tpto`
+  - Usage: /tpto \<player | *>
 - /tphere
-    - Description: Teleport a player at your positions
+    - Description: Teleport a player or all players at your position
     - Permission: `teleport.tphere`
-    - Usage: /tphere <player>
+    - Usage: /tphere \<player | *>
 - /vanish
-    - Description: Hide you from other players
+    - Description: Hide you or the player from other players
     - Permission: `teleport.vanish`
-    - Usage: /vanish
+    - Usage: /vanish | /vanish \<player>
 - /unvanish
-    - Description: Show you to other playerss
+    - Description: Show you or the player to other players
     - Permission: `teleport.unvanish`
-    - Usage: /vanish
+    - Usage: /unvanish | /unvanish \<player>
+- /tphelp
+    - Description: List of all teleport commands
+    - Permission: `teleport.help`
+    - Usage: /tphelp
