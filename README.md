@@ -1,6 +1,6 @@
 ![Teleport](https://cdn.modrinth.com/data/wpqIxw6U/images/f21c99d0f3768c4b0e6a2f69466358be0b56b1c9.png)
 
-# Teleport
+# Teleport v1.2
 
 A simple plugin for teleport, this plugin has 6 commands.
 
