@@ -27,42 +27,45 @@ import org.bukkit.plugin.java.JavaPlugin;
 
         @Override
         public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+            String prefix = "[TP] ";
+
             if (sender instanceof Player) {
                 Player player = (Player) sender;
 
                 if (cmd.getName().equalsIgnoreCase("tp")) {
 
                     if (args.length != 1) {
-                        player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.RED + " Usage: /tp <player>");
+                        player.sendMessage(ChatColor.AQUA + prefix + ChatColor.RED + "Usage: /tp <player>");
                         return true;
                     }
 
                     Player target = Bukkit.getPlayer(args[0]);
                     if (target == null) {
-                        player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.RED + " Player not found or not online.");
+                        player.sendMessage(ChatColor.AQUA + prefix + ChatColor.RED + "Player not found or not online.");
                         return true;
                     }
 
                     player.teleport(target.getLocation());
-                    player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.GREEN + " Teleported to " + target.getName());
+                    player.sendMessage(ChatColor.AQUA + prefix + ChatColor.GREEN + "Teleported to " + target.getName());
                     return true;
                 }
 
                 if (cmd.getName().equalsIgnoreCase("tphere")) {
 
                     if (args.length != 1) {
-                        player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.RED + " Usage: /tphere <player>");
+                        player.sendMessage(ChatColor.AQUA + prefix + ChatColor.RED + "Usage: /tphere <player>");
                         return true;
                     }
 
                     Player target = Bukkit.getPlayer(args[0]);
                     if (target == null) {
-                        player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.RED + " Player not found or not online.");
+                        player.sendMessage(ChatColor.AQUA + prefix + ChatColor.RED + "Player not found or not online.");
                         return true;
                     }
 
                     target.teleport(player.getLocation());
-                    player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.GREEN + " Teleported " + target.getName() + " to you.");
+                    player.sendMessage(ChatColor.AQUA + prefix + ChatColor.GREEN + "Teleported " + target.getName() + " to you.");
                     return true;
                 }
 
@@ -70,7 +73,7 @@ import org.bukkit.plugin.java.JavaPlugin;
                     for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
                         onlinePlayer.hidePlayer(player);
                     }
-                    player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.GREEN + " You are now vanished.");
+                    player.sendMessage(ChatColor.AQUA + prefix + ChatColor.GREEN + "You are now vanished.");
 
                     return true;
                 }
@@ -80,7 +83,7 @@ import org.bukkit.plugin.java.JavaPlugin;
                     for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
                         onlinePlayer.showPlayer(player);
                     }
-                    player.sendMessage(ChatColor.AQUA + "[TP]" + ChatColor.GREEN + " You are now visible to others.");
+                    player.sendMessage(ChatColor.AQUA + prefix + ChatColor.GREEN + "You are now visible to others.");
                     return true;
                 }
             } else if (sender instanceof ConsoleCommandSender) {

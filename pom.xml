@@ -6,7 +6,7 @@
 
   <groupId>com.arctic</groupId>
   <artifactId>Teleport</artifactId>
-  <version>1.0</version>
+  <version>1.2</version>
   <packaging>jar</packaging>
 
   <name>Teleport</name>
@@ -38,7 +38,7 @@
               <goal>shade</goal>
             </goals>
               <configuration>
-                  <outputFile>/Teleport.jar</outputFile>
+                  <outputFile>./Teleport-1.2.jar</outputFile>
               </configuration>
           </execution>
         </executions>
@@ -67,7 +67,7 @@
       <dependency>
           <groupId>org.spigotmc</groupId>
           <artifactId>spigot-api</artifactId>
-          <version>1.20.4-R0.1-SNAPSHOT</version>
+          <version>1.8.8-R0.1-SNAPSHOT</version>
           <scope>provided</scope>
       </dependency>
   </dependencies>
